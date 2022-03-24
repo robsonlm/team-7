@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 9,
+    "repeat": "working days"
+  },
+  {
+    "id": "2",
+    "name": "Olivia",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 9,
+    "repeat": "once"
+  },
+  {
+    "id": "3",
+    "name": "Lily",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 9,
+    "repeat": "everyday"
+  },
+  {
+    "id": "4",
+    "name": "Sophia",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 10,
+    "repeat": "working days"
+  },
+  {
+    "id": "5",
+    "name": "Emily",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 11,
+    "repeat": "working days"
+  },
+  {
+    "id": "6",
+    "name": "Amelia",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 9,
+    "repeat": "working days"
+  },
+  {
+    "id": "7",
+    "name": "Ava",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 9,
+    "repeat": "working days"
+  },
+  {
+    "id": "8",
+    "name": "Isla",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Wimbledon",
+    "to": "Shoreditch",
+    "role": "Drive",
+    "rideTime": 10,
+    "repeat": "working days"
+  },
+  {
+    "id": "9",
+    "name": "Isabella",
+    "age": 23,
+    "about": "Hi there, I am from Sweden and just arrived in London. I found a job in shoreditch area and would really need a buddy that I could share my ride with",
+    "rating": 5,
+    "from": "Shoreditch",
+    "to": "Wimbledon",
+    "role": "Drive",
+    "rideTime": 11,
+    "repeat": "working days"
+  }
+]
