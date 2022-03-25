@@ -22,11 +22,11 @@
 
     &-1 {
       @extend .profile__top;
-      background-image: url("../../assets/images/11.jpg");
+      background-image: url("../../assets/images/1.jpg");
     }
     &-2 {
       @extend .profile__top;
-      background-image: url("../../assets/images/1.jpg");
+      background-image: url("../../assets/images/10.jpg");
     }
     &-3 {
       @extend .profile__top;
@@ -61,12 +61,14 @@
   &__name {
     color: $color-white;
     @include typo-headline2;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
   }
 
   &__age {
     color: $color-white;
     @include typo-headline2;
     padding-bottom: 4rem;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
   }
 
   &__button {
@@ -91,6 +93,7 @@
     border-radius: 10px;
     align-content: center;
     align-items: center;
+    width: 100%;
 
     &-top {
       display: flex;

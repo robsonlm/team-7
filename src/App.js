@@ -15,6 +15,9 @@ function App() {
   return (
     <div className="app">
       <Switch>
+        <Route path="/" exact>
+          <Redirect to="/form" />
+        </Route>
         <Route
           path="/form"
           exact
