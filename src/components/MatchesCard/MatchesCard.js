@@ -13,10 +13,12 @@ const MatchesCard = ({ match, renderProps }) => {
         <div className="matches-card__right">
           <div className="matches-card__top">
             <span className="matches-card__name">
-              {match.name},{match.age}
+              {match.name}, {match.age}
             </span>
-            <span className="matches-card__rating">{match.rating}</span>
-            <img className="matches-card__rating-icon" src={starSVG} />
+            <span className="matches-card__rating">
+              {match.rating}&nbsp;
+              <img className="matches-card__rating-icon" src={starSVG} />
+            </span>
           </div>
           <div className="matches-card__bottom">
             <p className="matches-card__about">{match.about}</p>
