@@ -40,6 +40,9 @@ function App() {
   return (
     <div className="app">
       <Switch>
+        <Route path="/" exact>
+          <Redirect to="/form" />
+        </Route>
         <Route
           path="/form"
           exact
@@ -53,9 +56,11 @@ function App() {
           )}
         />
         <Route
-          path="/profile/"
+          path="/profile/:id"
           exact
-          render={(renderProps) => <Profile {...renderProps} />}
+          render={(renderProps) => (
+            <Profile matchResults={matchResults} {...renderProps} />
+          )}
         />
       </Switch>
 
