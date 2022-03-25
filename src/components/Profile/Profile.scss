@@ -1,0 +1,152 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+
+.profile {
+  display: flex;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__back {
+    position: absolute;
+    top: 35px;
+    left: 45px;
+  }
+
+  &__back-icon {
+    width: 0.875rem;
+    height: 1.25rem;
+  }
+
+  &__top {
+    display: flex;
+    width: 414px;
+    height: 512px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-size: cover;
+    background: no-repeat center center cover;
+
+    &-1 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/1.jpg");
+    }
+    &-2 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/10.jpg");
+    }
+    &-3 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/2.jpg");
+    }
+    &-4 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/3.jpg");
+    }
+    &-5 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/4.jpg");
+    }
+    &-6 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/5.jpg");
+    }
+    &-7 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/6.jpg");
+    }
+    &-8 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/7.jpg");
+    }
+    &-9 {
+      @extend .profile__top;
+      background-image: url("../../assets/images/8.jpg");
+    }
+  }
+
+  &__name {
+    color: $color-white;
+    @include typo-headline2;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  }
+
+  &__age {
+    color: $color-white;
+    @include typo-headline2;
+    padding-bottom: 4rem;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
+  }
+
+  &__button {
+    z-index: 99;
+    position: relative;
+    top: -40px;
+    width: 270px;
+  }
+
+  &__button-sent {
+    z-index: 99;
+    position: relative;
+    top: -40px;
+    width: 270px;
+  }
+
+  &__bottom {
+    height: 306px;
+    position: absolute;
+    top: 450px;
+    background-color: $color-white;
+    border-radius: 10px;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+
+    &-top {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+    }
+  }
+
+  &__number {
+    @include typo-headline2;
+    color: $color-dark-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 54px 0 0 0;
+    width: 110px;
+
+    &-desc {
+      @include typo-links;
+      color: $color-dark-blue;
+    }
+  }
+
+  &__about {
+    padding: 28px 35px;
+    @include typo-paragraph2;
+    color: $color-dark-blue;
+  }
+
+  &__preferences {
+    @include typo-links;
+    color: $color-dark-blue;
+    opacity: 0.8;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

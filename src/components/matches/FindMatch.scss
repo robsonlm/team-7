@@ -1,0 +1,59 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+
+.match-results {
+  display: flex;
+  flex-direction: column;
+  padding: $pad-margin;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__offset1 {
+    @include typo-paragraph1;
+    color: $color-dark-blue;
+    margin-left: 3.5rem;
+  }
+
+  &__offset2 {
+    @include typo-paragraph2;
+    color: $color-dark-blue;
+    margin-left: 3.5rem;
+  }
+
+  &__title {
+    @include typo-links;
+    color: $color-dark-blue;
+    padding: 2.125rem 0 1rem 3.5rem;
+  }
+
+  &__back {
+    padding: 1.188rem 0 2.188rem 1.813rem;
+  }
+
+  &__back-icon {
+    width: 0.875rem;
+    height: 1.25rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__map {
+    background-image: url("../../assets/images/map1.jpg");
+    height: 179px;
+    width: 344px;
+    border-radius: 10px;
+    padding: $pad-margin;
+    align-self: center;
+  }
+}

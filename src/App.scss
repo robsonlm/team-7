@@ -1,0 +1,23 @@
+@use "./styles/partials/breakpoints" as *;
+@use "./styles/partials/mixin" as *;
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/typography";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: $color-black;
+  font-family: "VarelaRound";
+  text-decoration: none;
+}
+
+// .app {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   width: 100%;
+// }

@@ -1,0 +1,61 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  height: 4.25rem;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 20.75rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    list-style: none;
+    width: 39vw;
+
+    padding-bottom: 0.5rem;
+    border-bottom: 0.188rem $color-dark-blue solid;
+
+    &--active {
+      @extend .nav__item;
+      border-bottom: 0.188rem $color-dark-blue solid;
+    }
+  }
+
+  &__item:hover {
+    border-bottom: 0.2rem $color-dark-blue solid;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @include typo-paragraph1;
+    text-decoration: none;
+    color: $color-dark-blue;
+
+    &--active {
+      @extend .nav__link;
+      font-weight: 400;
+      color: $color-dark-blue;
+    }
+  }
+}

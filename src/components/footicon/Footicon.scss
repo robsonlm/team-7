@@ -1,0 +1,20 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.footerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__label {
+    font-size: 0.6875rem;
+    @include typo-links;
+    color: $color-dark-blue;
+  }
+}
+.white {
+  color: white;
+}

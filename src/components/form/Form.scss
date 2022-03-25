@@ -1,0 +1,68 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+.form {
+  &__greeting {
+    width: 16.875rem;
+    @include typo-headline1;
+    color: $color-dark-blue;
+    padding-top: 4.375rem;
+
+    margin: auto;
+  }
+  &__locationlabel {
+    @include typo-paragraph2;
+    color: $color-dark-blue;
+  }
+  &__titles {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__title {
+    // width: 50%;
+    margin-bottom: 3rem;
+    text-align: center;
+    &--active {
+      border-bottom: solid 1px black;
+    }
+    @include typo-paragraph2;
+    color: $color-dark-blue;
+  }
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 1.75rem 2.1875rem;
+    padding: 2.125rem 2.3125rem;
+    background-color: $color-light-blue;
+    border: none;
+    border-radius: 1.25rem;
+  }
+  &__radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+  &__radiolabel {
+    align-self: center;
+  }
+  &__dropdown {
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    margin-bottom: 1.9375rem;
+  }
+}
+input {
+  height: 3rem;
+  border-radius: 0.625rem;
+  border: none;
+}
+select {
+  width: 47%;
+  height: 3rem;
+  border: 0;
+  border-radius: 0.625rem;
+}
