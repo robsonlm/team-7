@@ -6,7 +6,7 @@
 .nav {
   display: flex;
   flex-direction: column;
-  background-color: $primary-light;
+  background-color: $color-white;
   height: 4.25rem;
   justify-content: flex-end;
   align-items: center;
@@ -32,16 +32,16 @@
     width: 39vw;
 
     padding-bottom: 0.5rem;
-    border-bottom: 0.188rem $secondary-dark solid;
+    border-bottom: 0.188rem $color-dark-blue solid;
 
     &--active {
       @extend .nav__item;
-      border-bottom: 0.188rem $primary-dark solid;
+      border-bottom: 0.188rem $color-dark-blue solid;
     }
   }
 
   &__item:hover {
-    border-bottom: 0.2rem $primary-dark solid;
+    border-bottom: 0.2rem $color-dark-blue solid;
   }
 
   &__link {
@@ -50,12 +50,12 @@
     align-items: flex-end;
     @include typo-paragraph1;
     text-decoration: none;
-    color: $secondary-dark;
+    color: $color-dark-blue;
 
     &--active {
       @extend .nav__link;
       font-weight: 400;
-      color: $primary-dark;
+      color: $color-dark-blue;
     }
   }
 }

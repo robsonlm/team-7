@@ -1,0 +1,31 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+
+.match-results {
+  display: flex;
+  padding: $pad-margin;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include typo-headline1;
+    color: $color-dark-blue;
+    padding: 3.5rem;
+  }
+
+  &__back-icon {
+    width: 0.875rem;
+    height: 1.25rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
