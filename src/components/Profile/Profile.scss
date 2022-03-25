@@ -17,42 +17,44 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-size: cover;
+    background: no-repeat center center cover;
 
     &-1 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/11.jpg");
     }
     &-2 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/1.jpg");
     }
     &-3 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/2.jpg");
     }
     &-4 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/3.jpg");
     }
     &-5 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/4.jpg");
     }
     &-6 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/5.jpg");
     }
     &-7 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/6.jpg");
     }
     &-8 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/7.jpg");
     }
     &-9 {
       @extend .profile__top;
-      background-image: url("../../assets/images/sarah.jpg");
+      background-image: url("../../assets/images/8.jpg");
     }
   }
 
@@ -64,7 +66,21 @@
   &__age {
     color: $color-white;
     @include typo-headline2;
-    padding-bottom: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  &__button {
+    z-index: 99;
+    position: relative;
+    top: -40px;
+    width: 270px;
+  }
+
+  &__button-sent {
+    z-index: 99;
+    position: relative;
+    top: -40px;
+    width: 270px;
   }
 
   &__bottom {

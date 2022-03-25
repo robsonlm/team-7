@@ -1,10 +1,18 @@
 import React from "react";
+import Button from "../button/Button";
 import "./Profile.scss";
+import { useState } from "react";
 
 const Profile = (props) => {
+  const [changeText, setChangeText] = useState(false);
+
   const profile = props.matchResults.find(
     (x) => x.id === props.match.params.id
   );
+
+  const handleChangeText = () => {
+    setChangeText(true);
+  };
   console.log(profile);
   return (
     <section className="profile">
@@ -12,8 +20,18 @@ const Profile = (props) => {
         <div className={`profile__top-${profile.id}`}>
           <h2 className="profile__name">{profile.name}</h2>
           <h2 className="profile__age">{profile.age} years old</h2>
-          <div className="profile__button"></div>
+
+          {changeText === false ? (
+            <div className="profile__button" onClick={handleChangeText}>
+              <Button text="Suggest a Ride" />
+            </div>
+          ) : (
+            <div className="profile__button-sent" onClick={handleChangeText}>
+              <Button id="grey" text="Suggestion sent"></Button>
+            </div>
+          )}
         </div>
+
         <div className="profile__bottom">
           <div className="profile__bottom-top">
             <h2 className="profile__number">
