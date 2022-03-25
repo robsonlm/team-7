@@ -1,7 +1,16 @@
 import React from 'react'
-
+import Footicon from '../footicon/Footicon'
+import './Footer.scss';
+import message from '../../assets/svg/message.svg';
+import profile from '../../assets/svg/profile.svg';
+import search from '../../assets/svg/search.svg';
 export default function Footer() {
   return (
-    <div>Footer</div>
+      <section className='footer'>
+    <Footicon icon = {message} label={'chats'} />
+    <Footicon icon = {search} label={'search'}/>
+    <Footicon icon = {profile} label={'profile'} />
+   
+    </section>
   )
 }
