@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import './Footicon.scss'
 
 
-export default function Footicon({icon, label,link}) {
+export default function Footicon({icon, label,link,white}) {
   return (
     <div className='footerIcon'>
       <Link to={link}>
         <img src={icon}></img>
-        <p className='footerIcon__label'>{label}</p>
+        <p className={`footerIcon__label ${white}`}>{label}</p>
       </Link>
     </div>
   )
