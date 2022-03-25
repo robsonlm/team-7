@@ -10,25 +10,28 @@ const FindMatch = ({ renderProps, matchResults }) => {
   return (
     <>
       <section className="match-results">
+        <Link className="match-results__back" to="/">
+          <img
+            className="match-results__back-icon"
+            src={backSVG}
+            alt="Return"
+          />
+        </Link>
         <article className="match-results__wrapper">
+          <h1 className="match-results__offset1">Offset 10 hrs of Netflix</h1>
+          <h2 className="match-results__offset2">by sharing this trip</h2>
           {matchResults.length == 0 && (
-            <h1 className="match-results__title">No matches found</h1>
+            <p className="match-results__title">No matches found</p>
           )}
           {matchResults.length == 1 && (
-            <h1 className="match-results__title">1 match found</h1>
+            <p className="match-results__title">1 match found</p>
           )}
           {matchResults.length > 1 && (
-            <h1 className="match-results__title">
+            <p className="match-results__title">
               {matchResults.length} matches found
-            </h1>
+            </p>
           )}
-          <Link className="match-results__back" to="/">
-            <img
-              className="match-results__back-icon"
-              src={backSVG}
-              alt="Return"
-            />
-          </Link>
+
           <div className="match-results__cards">
             {matchResults.map((match) => (
               <Link to={`/profile/${match.id}`}>
@@ -36,6 +39,7 @@ const FindMatch = ({ renderProps, matchResults }) => {
               </Link>
             ))}
           </div>
+          <div className="match-results__map"></div>
         </article>
       </section>
     </>
