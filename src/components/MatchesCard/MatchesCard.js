@@ -17,7 +17,11 @@ const MatchesCard = ({ match, renderProps }) => {
             </span>
             <span className="matches-card__rating">
               {match.rating}&nbsp;
-              <img className="matches-card__rating-icon" src={starSVG} />
+              <img
+                className="matches-card__rating-icon"
+                alt="ratings"
+                src={starSVG}
+              />
             </span>
           </div>
           <div className="matches-card__bottom">

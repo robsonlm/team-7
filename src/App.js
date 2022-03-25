@@ -1,13 +1,11 @@
 import "./App.scss";
-import { Header } from "./components/Header/Header";
 import Footer from "./components/footer/Footer";
 import FindMatch from "./components/matches/FindMatch";
 import Form from "./components/form/Form";
 import "./App.scss";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile/Profile";
-import { useEffect, useState } from "react";
-import data from "./data/data.json";
+import { useState } from "react";
 
 function App() {
   const [matchResults, setMatchResults] = useState([]);
