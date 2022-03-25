@@ -5,6 +5,9 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 3rem 4.0625rem;
-
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
 }
