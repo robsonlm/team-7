@@ -7,35 +7,11 @@ import "./App.scss";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile/Profile";
 import { useEffect, useState } from "react";
-import data from "./data/data.json";
 
 function App() {
-  const [matchResults, setMatchResults] = useState(data);
-  const [rideOrDrive, setRideordrive] = useState(null);
-  const onSubmit = (search)=>{
-    search.preventDefault()
-
-    console.log("from ",search.target.from.value)
-    console.log("to",search.target.to.value)
-
-    console.log("ride or drive ",rideOrDrive)
-    console.log("time ",search.target.from.value)
-    console.log("days ",search.target.days.value)
-    const searched ={
-      "from": search.target.time.value,
-      "to": search.target.to.value,
-      "role": rideOrDrive,
-    }
-    console.log('searched',searched)
-    console.log('data',data)
-    const filtered = data.filter(
-      (w) =>
-        w.from.includes(searched.from) ||
-        w.to.includes(searched) ||
-        w.role.includes(searched.role)
-    );
-    console.log(filtered)
-  }
+  const [matchResults, setMatchResults] = useState([]);
+  
+  
 
   return (
     <div className="app">
@@ -46,7 +22,7 @@ function App() {
         <Route
           path="/form"
           exact
-          render={(renderProps) => <Form sub = {onSubmit} setRideOrDrive ={setRideordrive} rideOrDrive={rideOrDrive} {...renderProps} />}
+          render={(renderProps) => <Form  setMatchResults={setMatchResults}  {...renderProps} />}
         />
         <Route
           path="/matchresults"

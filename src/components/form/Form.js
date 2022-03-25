@@ -1,17 +1,51 @@
 import React from 'react'
+import { useEffect, useState } from "react";
 import './Form.scss'
 import Button  from '../button/Button';
-export default function Form({sub, setRideOrDrive, rideOrDrive}) {
+import data from '../../data/data.json'
+export default function Form({setMatchResults, history}) {
+  const [rideOrDrive, setRideOrDrive] = useState([]);
+  console.log(history)
   const onChange = (e) =>{
     console.log(e.target.value)
     setRideOrDrive(e.target.value)
+
+  }
+  const onSubmit = (search)=>{
+    search.preventDefault()
+
+    console.log("from ",search.target.from.value)
+    console.log("to",search.target.to.value)
+
+    console.log("ride or drive ",rideOrDrive)
+    console.log("time ",search.target.from.value)
+    console.log("days ",search.target.days.value)
+    const searched ={
+      "from": search.target.from.value,
+      "to": search.target.to.value,
+      "role": rideOrDrive,
+    }
+    console.log('searched',searched)
+    console.log('data',data)
+    const filtered = data.filter(
+      (w) =>
+        w.from.includes(searched.from) &&
+        w.to.includes(searched.to) &&
+        w.role.includes(searched.role)
+    );
+    console.log(filtered)
+    setMatchResults(filtered);
+    history.push('/matchresults')
+  
+   
+
 
   }
   return (
     <div className='form'>
       
       <h1 className='form__greeting'>Good evening, Olivia</h1>
-      <form className='form__fieldset' onSubmit={sub}>
+      <form className='form__fieldset' onSubmit={onSubmit}>
       <div className='form__titles'>
         <h2 className='form__title form__title--active'>Recurring</h2>
         <h2 className='form__title'>One ride</h2>
@@ -60,7 +94,7 @@ export default function Form({sub, setRideOrDrive, rideOrDrive}) {
             
           </select>
         </div>
-        <Button text='search'/>
+        <Button text='Search'/>
 
       </form>
     </div>
