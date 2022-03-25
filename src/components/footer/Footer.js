@@ -8,8 +8,8 @@ export default function Footer() {
   return (
       <section className='footer'>
     <Footicon icon = {message} label={'chats'} />
-    <Footicon icon = {search} label={'search'}/>
-    <Footicon icon = {profile} label={'profile'} />
+    <Footicon icon = {search} label={'search'} link ={'/form'}/>
+    <Footicon icon = {profile} label={'profile'} link={'/profile/1'} />
    
     </section>
   )
