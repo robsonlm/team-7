@@ -8,7 +8,7 @@ const MatchesCard = ({ match, renderProps }) => {
     <section className="matches-card">
       <div className="matches-card__wrapper">
         <div className="matches-card__left">
-          <div className="matches-card__image"></div>
+          <div className={`matches-card__image-${match.id}`}></div>
         </div>
         <div className="matches-card__right">
           <div className="matches-card__top">

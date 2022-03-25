@@ -2,6 +2,8 @@ import React from "react";
 import Button from "../button/Button";
 import "./Profile.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import backSVG from "../../assets/icons/back-icon.svg";
 
 const Profile = (props) => {
   const [changeText, setChangeText] = useState(false);
@@ -18,6 +20,9 @@ const Profile = (props) => {
     <section className="profile">
       <article className="profile__wrapper">
         <div className={`profile__top-${profile.id}`}>
+          <Link className="profile__back" to="/matchresults">
+            <img className="profile__back-icon" src={backSVG} alt="Return" />
+          </Link>
           <h2 className="profile__name">{profile.name}</h2>
           <h2 className="profile__age">{profile.age} years old</h2>
 

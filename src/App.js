@@ -7,11 +7,10 @@ import "./App.scss";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile/Profile";
 import { useEffect, useState } from "react";
+import data from "./data/data.json";
 
 function App() {
   const [matchResults, setMatchResults] = useState([]);
-  
-  
 
   return (
     <div className="app">
@@ -22,7 +21,9 @@ function App() {
         <Route
           path="/form"
           exact
-          render={(renderProps) => <Form  setMatchResults={setMatchResults}  {...renderProps} />}
+          render={(renderProps) => (
+            <Form setMatchResults={setMatchResults} {...renderProps} />
+          )}
         />
         <Route
           path="/matchresults"
