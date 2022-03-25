@@ -15,7 +15,11 @@
   &__title {
     @include typo-headline1;
     color: $color-dark-blue;
-    padding: 3.5rem;
+    padding: 4.625rem 4.5rem 4.75rem;
+  }
+
+  &__back {
+    padding: 0 0 3rem 2.813rem;
   }
 
   &__back-icon {

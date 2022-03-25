@@ -22,7 +22,7 @@ const FindMatch = ({ renderProps, matchResults }) => {
               {matchResults.length} matches found
             </h1>
           )}
-          <Link to="/">
+          <Link className="match-results__back" to="/">
             <img
               className="match-results__back-icon"
               src={backSVG}
