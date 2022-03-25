@@ -31,7 +31,9 @@ const FindMatch = ({ renderProps, matchResults }) => {
           </Link>
           <div className="match-results__cards">
             {matchResults.map((match) => (
-              <MatchesCard key={match.id} match={match} {...renderProps} />
+              <Link to={`/profile/${match.id}`}>
+                <MatchesCard key={match.id} match={match} {...renderProps} />
+              </Link>
             ))}
           </div>
         </article>
