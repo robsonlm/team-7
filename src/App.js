@@ -1,17 +1,14 @@
 import "./App.scss";
-import { Header } from "./components/Header/Header";
 import Footer from "./components/footer/Footer";
 import FindMatch from "./components/matches/FindMatch";
 import Form from "./components/form/Form";
 import "./App.scss";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile/Profile";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [matchResults, setMatchResults] = useState([]);
-  
-  
 
   return (
     <div className="app">
@@ -22,7 +19,9 @@ function App() {
         <Route
           path="/form"
           exact
-          render={(renderProps) => <Form  setMatchResults={setMatchResults}  {...renderProps} />}
+          render={(renderProps) => (
+            <Form setMatchResults={setMatchResults} {...renderProps} />
+          )}
         />
         <Route
           path="/matchresults"

@@ -10,6 +10,17 @@
     position: relative;
   }
 
+  &__back {
+    position: absolute;
+    top: 35px;
+    left: 45px;
+  }
+
+  &__back-icon {
+    width: 0.875rem;
+    height: 1.25rem;
+  }
+
   &__top {
     display: flex;
     width: 414px;
@@ -61,7 +72,7 @@
   &__name {
     color: $color-white;
     @include typo-headline2;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
   }
 
   &__age {
