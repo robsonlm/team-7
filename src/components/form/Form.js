@@ -1,25 +1,30 @@
 import React from 'react'
 import './Form.scss'
 import Button  from '../button/Button';
-export default function Form() {
+export default function Form({sub, setRideOrDrive, rideOrDrive}) {
+  const onChange = (e) =>{
+    console.log(e.target.value)
+    setRideOrDrive(e.target.value)
+
+  }
   return (
     <div className='form'>
       
       <h1 className='form__greeting'>Good evening, Olivia</h1>
-      <fieldset className='form__fieldset'>
+      <form className='form__fieldset' onSubmit={sub}>
       <div className='form__titles'>
         <h2 className='form__title form__title--active'>Recurring</h2>
-        <h2 className='form__title form__title--active'>One ride</h2>
+        <h2 className='form__title'>One ride</h2>
       </div>
-        <label>From</label>
-        <input></input>
-        <label>To</label>
-        <input></input>
+        <label className='form__locationlabel'>From</label>
+        <input id="from" name="from"></input>
+        <label className='form__locationlabel form__tolabel'>To</label>
+        <input id="toInput" name="to"></input>
         <div className='form__radio'>
-        <input type="radio" name="contact" value="Ride" />
-        <label  for="email">Ride</label>
-        <input className='form__radiolabel' type="radio" name="contact" value="Drive" />
-        <label className='form__radiolabel' for="phone">Drive</label>
+        <input type="radio" name="ride" value="Ride" checked={rideOrDrive ==="Ride"} onChange={onChange}/>
+        <label className='form__radiolabel' >Ride</label>
+        <input  type="radio" name="drive" value="Drive" checked={rideOrDrive ==="Drive"} onChange={onChange}/>
+        <label className='form__radiolabel' >Drive</label>
         </div>
         <div className='form__dropdown'>
           <select id="time" name="time">
@@ -49,7 +54,7 @@ export default function Form() {
             <option value ='24' > At 12 am</option>
             
           </select>
-          <select id="frequency" name="frequency">
+          <select id="days" name="days">
             <option value ='weekdays' > Weekdays</option>
             <option value ='weekends' > Weekends</option>
             
@@ -57,7 +62,7 @@ export default function Form() {
         </div>
         <Button text='search'/>
 
-      </fieldset>
+      </form>
     </div>
   )
 }
